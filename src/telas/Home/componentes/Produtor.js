@@ -1,6 +1,5 @@
 import React, {useMemo} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-
 import Estrelas from '../../../componentes/Estrelas';
 
 const distanciaEmMetros = distancia => {

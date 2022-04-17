@@ -1,19 +1,24 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-
+import {Image, StyleSheet, Text, View} from 'react-native';
 import logo from '../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
 
-export default function Topo({ melhoresProdutores }) {
-  const { boasVindas, legenda, legendaMelhoresProdutores } = useTextos();
+export default function Topo({melhoresProdutores}) {
+  const {boasVindas, legenda, legendaMelhoresProdutores} = useTextos();
 
-  return <>
-    <View style={estilos.topo}>
-      <Image source={logo} style={estilos.imagem} />
-      <Text style={estilos.boasVindas}>{melhoresProdutores ? "" : boasVindas}</Text>
-      <Text style={estilos.legenda}>{melhoresProdutores ? legendaMelhoresProdutores : legenda}</Text>
-    </View>    
-  </>
+  return (
+    <>
+      <View style={estilos.topo}>
+        <Image source={logo} style={estilos.imagem} />
+        <Text style={estilos.boasVindas}>
+          {melhoresProdutores ? '' : boasVindas}
+        </Text>
+        <Text style={estilos.legenda}>
+          {melhoresProdutores ? legendaMelhoresProdutores : legenda}
+        </Text>
+      </View>
+    </>
+  );
 }
 
 const estilos = StyleSheet.create({
@@ -39,11 +44,11 @@ const estilos = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     fontWeight: 'bold',
-    color: '#464646'
+    color: '#464646',
   },
   legenda: {
     fontSize: 16,
     lineHeight: 26,
     color: '#A3A3A3',
-  }
+  },
 });

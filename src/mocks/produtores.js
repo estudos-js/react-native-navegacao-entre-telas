@@ -16,236 +16,246 @@ import verduras from '../assets/verduras/Verduras.png';
 
 const gerarNumeroAleatorio = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+};
 
 const produtores = {
   lista: [
     {
-      nome: "Green",
+      nome: 'Green',
       imagem: green,
       distancia: gerarNumeroAleatorio(1, 500),
       estrelas: gerarNumeroAleatorio(1, 5),
       cestas: [
         {
           detalhes: {
-            nome: "Brócolis e Pepino",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
-            imagem: pepino
+            nome: 'Brócolis e Pepino',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
+            imagem: pepino,
           },
           itens: [
             {
-              nome: "Brócolis",
+              nome: 'Brócolis',
               imagem: brocolis,
             },
             {
-              nome: "Pepino",
+              nome: 'Pepino',
               imagem: pepino,
             },
-          ]
+          ],
         },
         {
           detalhes: {
-            nome: "Brócolis",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Brócolis',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: brocolis
+            imagem: brocolis,
           },
           itens: [
             {
-              nome: "Brócolis",
+              nome: 'Brócolis',
               imagem: brocolis,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     {
-      nome: "Salad",
+      nome: 'Salad',
       imagem: salad,
       distancia: gerarNumeroAleatorio(1, 500),
       estrelas: gerarNumeroAleatorio(1, 5),
       cestas: [
         {
           detalhes: {
-            nome: "Salada completa",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Salada completa',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: verduras
+            imagem: verduras,
           },
           itens: [
             {
-              nome: "Tomate",
+              nome: 'Tomate',
               imagem: tomate,
             },
             {
-              nome: "Brócolis",
+              nome: 'Brócolis',
               imagem: brocolis,
             },
             {
-              nome: "Pepino",
+              nome: 'Pepino',
               imagem: pepino,
             },
-          ]
+          ],
         },
         {
           detalhes: {
-            nome: "Tomate e pepino",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Tomate e pepino',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: tomate
+            imagem: tomate,
           },
           itens: [
             {
-              nome: "Tomate",
+              nome: 'Tomate',
               imagem: tomate,
             },
             {
-              nome: "Pepino",
+              nome: 'Pepino',
               imagem: pepino,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     {
-      nome: "Jenny Jack Farm",
+      nome: 'Jenny Jack Farm',
       imagem: jennyJack,
       distancia: gerarNumeroAleatorio(1, 500),
       estrelas: gerarNumeroAleatorio(1, 5),
       cestas: [
         {
           detalhes: {
-            nome: "Muita Batata",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Muita Batata',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: batata
+            imagem: batata,
           },
           itens: [
             {
-              nome: "Batata",
+              nome: 'Batata',
               imagem: batata,
             },
-          ]
+          ],
         },
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Tomate e Brócolis',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: brocolis
+            imagem: brocolis,
           },
           itens: [
             {
-              nome: "Tomate",
+              nome: 'Tomate',
               imagem: tomate,
             },
             {
-              nome: "Brócolis",
+              nome: 'Brócolis',
               imagem: brocolis,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     {
-      nome: "Grow",
+      nome: 'Grow',
       imagem: grow,
       distancia: gerarNumeroAleatorio(1, 500),
       estrelas: gerarNumeroAleatorio(1, 5),
       cestas: [
         {
           detalhes: {
-            nome: "Abobora e Aspargos",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Abobora e Aspargos',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: aspargos
+            imagem: aspargos,
           },
           itens: [
             {
-              nome: "Abóbora",
+              nome: 'Abóbora',
               imagem: abobora,
             },
             {
-              nome: "Aspargos",
+              nome: 'Aspargos',
               imagem: aspargos,
-            }
-          ]
+            },
+          ],
         },
         {
           detalhes: {
-            nome: "Tomate e Abobora",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Tomate e Abobora',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: abobora
+            imagem: abobora,
           },
           itens: [
             {
-              nome: "Tomate",
+              nome: 'Tomate',
               imagem: tomate,
             },
             {
-              nome: "Abóbora",
+              nome: 'Abóbora',
               imagem: abobora,
-            }
-          ]
-        }
-      ]
+            },
+          ],
+        },
+      ],
     },
     {
-      nome: "Potager",
+      nome: 'Potager',
       imagem: potager,
       distancia: gerarNumeroAleatorio(1, 500),
       estrelas: gerarNumeroAleatorio(1, 5),
       cestas: [
         {
           detalhes: {
-            nome: "Pepinos",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Pepinos',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: pepino
+            imagem: pepino,
           },
           itens: [
             {
-              nome: "Pepino",
+              nome: 'Pepino',
               imagem: pepino,
             },
-          ]
+          ],
         },
         {
           detalhes: {
-            nome: "Brócolis, Aspargos e Cenoura",
-            descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
-            preco: "R$ 40,00",
+            nome: 'Brócolis, Aspargos e Cenoura',
+            descricao:
+              'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
+            preco: 'R$ 40,00',
 
-            imagem: cenoura2
+            imagem: cenoura2,
           },
           itens: [
             {
-              nome: "Brócolis",
+              nome: 'Brócolis',
               imagem: brocolis,
             },
             {
-              nome: "Aspargos",
+              nome: 'Aspargos',
               imagem: aspargos,
             },
             {
-              nome: "Cenoura",
+              nome: 'Cenoura',
               imagem: cenoura,
-            }
-          ]
-        }
-      ]
-    }
-  ]
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export default produtores;
