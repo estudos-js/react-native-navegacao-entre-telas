@@ -10,14 +10,17 @@ export default function Produtores({melhoresProdutores}) {
   const navigation = useNavigation();
   const route = useRoute();
   const lista = useProdutores(melhoresProdutores);
-  const {tituloProdutores} = useTextos();
+  const {tituloProdutores, mensagemCompra} = useTextos();
   const nomeCompra = route.params?.compra.nome;
+  const messagemCompleta = mensagemCompra?.replace('$NOME', nomeCompra);
 
   const TopoLista = () => {
     return (
       <>
         <Topo melhoresProdutores={melhoresProdutores} />
-        <Text>{nomeCompra}</Text>
+        {!!nomeCompra && (
+          <Text style={styleProdutores.compra}>{messagemCompleta}</Text>
+        )}
         <Text style={styleProdutores.titulo}>{tituloProdutores}</Text>
       </>
     );
@@ -50,5 +53,12 @@ const styleProdutores = StyleSheet.create({
     marginTop: 16,
     fontWeight: 'bold',
     color: '#464646',
+  },
+  compra: {
+    backgroundColor: '#EAF5F3',
+    padding: 16,
+    color: '#464646',
+    fontSize: 16,
+    lineHeight: 26,
   },
 });
