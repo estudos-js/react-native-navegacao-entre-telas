@@ -13,15 +13,17 @@ export default function Produtores({melhoresProdutores}) {
   const lista = useProdutores(melhoresProdutores);
   const {tituloProdutores, mensagemCompra} = useTextos();
   const nomeCompra = route.params?.compra.nome;
-  const timestamp = route.params?.compra.timestamp;
+  const timestampCompra = route.params?.compra.timestamp;
   const messagemCompleta = mensagemCompra?.replace('$NOME', nomeCompra);
 
   useEffect(() => {
     setExibeMensagem(!!nomeCompra);
+    let timeout;
     if (nomeCompra) {
-      setTimeout(() => setExibeMensagem(false), 3000);
+      timeout = setTimeout(() => setExibeMensagem(false), 3000);
     }
-  }, [timestamp]);
+    return () => clearTimeout(timeout);
+  }, [nomeCompra, timestampCompra]);
 
   const TopoLista = () => {
     return (
