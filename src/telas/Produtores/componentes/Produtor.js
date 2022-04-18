@@ -19,20 +19,24 @@ export default function Produtor({
   );
 
   return (
-    <TouchableOpacity style={estilos.cartao} onPress={aoPressionar}>
-      <Image source={imagem} style={estilos.imagem} accessibilityLabel={nome} />
-      <View style={estilos.informacoes}>
+    <TouchableOpacity style={styleProdutor.cartao} onPress={aoPressionar}>
+      <Image
+        source={imagem}
+        style={styleProdutor.imagem}
+        accessibilityLabel={nome}
+      />
+      <View style={styleProdutor.informacoes}>
         <View>
-          <Text style={estilos.nome}>{nome}</Text>
+          <Text style={styleProdutor.nome}>{nome}</Text>
           <Estrelas quantidade={estrelas} />
         </View>
-        <Text style={estilos.distancia}>{distanciaTexto}</Text>
+        <Text style={styleProdutor.distancia}>{distanciaTexto}</Text>
       </View>
     </TouchableOpacity>
   );
 }
 
-const estilos = StyleSheet.create({
+const styleProdutor = StyleSheet.create({
   cartao: {
     backgroundColor: '#F6F6F6',
     marginVertical: 8,

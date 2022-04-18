@@ -16,7 +16,7 @@ export default function Produtores({melhoresProdutores}) {
     return (
       <>
         <Topo melhoresProdutores={melhoresProdutores} />
-        <Text style={estilos.titulo}>{tituloProdutores}</Text>
+        <Text style={styleProdutores.titulo}>{tituloProdutores}</Text>
       </>
     );
   };
@@ -32,12 +32,12 @@ export default function Produtores({melhoresProdutores}) {
       )}
       keyExtractor={({nome}) => nome}
       ListHeaderComponent={TopoLista}
-      style={estilos.lista}
+      style={styleProdutores.lista}
     />
   );
 }
 
-const estilos = StyleSheet.create({
+const styleProdutores = StyleSheet.create({
   lista: {
     backgroundColor: '#ffffff',
   },

@@ -11,26 +11,26 @@ const ALTURA_PADRAO = 270;
 
 export default function Topo({titulo, imagem = topo, altura = ALTURA_PADRAO}) {
   const navigation = useNavigation();
-  const estilos = funcaoEstilos(altura);
+  const styleTopo = functionStyleTopo(altura);
   return (
     <>
-      <Image source={imagem} style={estilos.topo} />
+      <Image source={imagem} style={styleTopo.topo} />
       <Gradiente
         width={largura}
         height={(130 / 360) * largura}
-        style={estilos.gradiente}
+        style={styleTopo.gradiente}
       />
-      <Texto style={estilos.titulo}>{titulo}</Texto>
+      <Texto style={styleTopo.titulo}>{titulo}</Texto>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        style={estilos.botaoVoltar}>
-        <VoltarSVG color="white" style={estilos.voltar} />
+        style={styleTopo.botaoVoltar}>
+        <VoltarSVG color="white" style={styleTopo.voltar} />
       </TouchableOpacity>
     </>
   );
 }
 
-const funcaoEstilos = altura =>
+const functionStyleTopo = altura =>
   StyleSheet.create({
     topo: {
       width: '100%',

@@ -27,13 +27,13 @@ export default function Estrelas({
   };
 
   return (
-    <View style={estilos.estrelas}>
+    <View style={styleEstrelas.estrelas}>
       <RenderEstrelas />
     </View>
   );
 }
 
-const estilos = StyleSheet.create({
+const styleEstrelas = StyleSheet.create({
   estrelas: {
     flexDirection: 'row',
   },

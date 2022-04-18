@@ -4,14 +4,14 @@ import Texto from '../../../componentes/Texto';
 
 export default function Item({item: {nome, imagem}}) {
   return (
-    <View style={estilos.item}>
-      <Image source={imagem} style={estilos.imagem} />
-      <Texto style={estilos.nome}>{nome}</Texto>
+    <View style={styleItem.item}>
+      <Image source={imagem} style={styleItem.imagem} />
+      <Texto style={styleItem.nome}>{nome}</Texto>
     </View>
   );
 }
 
-const estilos = StyleSheet.create({
+const styleItem = StyleSheet.create({
   item: {
     flexDirection: 'row',
     borderBottomWidth: 1,

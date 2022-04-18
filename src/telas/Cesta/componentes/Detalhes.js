@@ -8,22 +8,22 @@ export default function Detalhes({nome, produtor, descricao, preco}) {
 
   return (
     <>
-      <Texto style={estilos.nome}>{nome}</Texto>
-      <View style={estilos.fazenda}>
-        <Image source={produtor.imagem} style={estilos.imagemFazenda} />
-        <Texto style={estilos.nomeFazenda}>{produtor.nome}</Texto>
+      <Texto style={styleDetalhes.nome}>{nome}</Texto>
+      <View style={styleDetalhes.fazenda}>
+        <Image source={produtor.imagem} style={styleDetalhes.imagemFazenda} />
+        <Texto style={styleDetalhes.nomeFazenda}>{produtor.nome}</Texto>
       </View>
-      <Texto style={estilos.descricao}>{descricao}</Texto>
-      <Texto style={estilos.preco}>{preco}</Texto>
+      <Texto style={styleDetalhes.descricao}>{descricao}</Texto>
+      <Texto style={styleDetalhes.preco}>{preco}</Texto>
 
-      <TouchableOpacity style={estilos.botao} onPress={() => {}}>
-        <Texto style={estilos.textoBotao}>{botaoComprar}</Texto>
+      <TouchableOpacity style={styleDetalhes.botao} onPress={() => {}}>
+        <Texto style={styleDetalhes.textoBotao}>{botaoComprar}</Texto>
       </TouchableOpacity>
     </>
   );
 }
 
-const estilos = StyleSheet.create({
+const styleDetalhes = StyleSheet.create({
   nome: {
     color: '#464646',
     fontSize: 26,

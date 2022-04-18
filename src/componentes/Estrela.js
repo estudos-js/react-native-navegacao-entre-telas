@@ -9,7 +9,7 @@ export default function Estrela({
   preenchida,
   grande = false,
 }) {
-  const estilos = estilosFuncao(grande);
+  const styleEstrela = functionStyleEstrela(grande);
 
   const getImagem = () => {
     if (preenchida) {
@@ -20,12 +20,12 @@ export default function Estrela({
 
   return (
     <TouchableOpacity onPress={aoPressionar} disabled={desabilitada}>
-      <Image source={getImagem()} style={estilos.estrela} />
+      <Image source={getImagem()} style={styleEstrela.estrela} />
     </TouchableOpacity>
   );
 }
 
-const estilosFuncao = grande =>
+const functionStyleEstrela = grande =>
   StyleSheet.create({
     estrela: {
       width: grande ? 36 : 12,

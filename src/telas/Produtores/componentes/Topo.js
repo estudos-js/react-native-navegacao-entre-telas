@@ -8,12 +8,12 @@ export default function Topo({melhoresProdutores}) {
 
   return (
     <>
-      <View style={estilos.topo}>
-        <Image source={logo} style={estilos.imagem} />
-        <Text style={estilos.boasVindas}>
+      <View style={styleTopo.topo}>
+        <Image source={logo} style={styleTopo.imagem} />
+        <Text style={styleTopo.boasVindas}>
           {melhoresProdutores ? '' : boasVindas}
         </Text>
-        <Text style={estilos.legenda}>
+        <Text style={styleTopo.legenda}>
           {melhoresProdutores ? legendaMelhoresProdutores : legenda}
         </Text>
       </View>
@@ -21,7 +21,7 @@ export default function Topo({melhoresProdutores}) {
   );
 }
 
-const estilos = StyleSheet.create({
+const styleTopo = StyleSheet.create({
   topo: {
     backgroundColor: '#F6F6F6',
     padding: 16,
