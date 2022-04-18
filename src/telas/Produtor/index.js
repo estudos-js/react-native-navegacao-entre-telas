@@ -1,6 +1,9 @@
 import React from 'react';
 import {Text} from 'react-native';
+import {useRoute} from '@react-navigation/native';
 
 export default function Produtor() {
-  return <Text>Produtor</Text>;
+  const route = useRoute();
+  console.log(route.params);
+  return <Text>Produtores</Text>;
 }
