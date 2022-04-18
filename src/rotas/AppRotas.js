@@ -11,13 +11,16 @@ const screenOptions = ({route}) => ({
   headerShown: false,
   tabBarActiveTintColor: '#2A9F85',
   tabBarInactiveTintColor: '#C7C7C7',
+  tabBarLabelStyle: {
+    fontSize: 15,
+  },
   tabBarIcon: ({color}) => {
     let Icon = Home;
 
     if (route.name === 'Melhores Produtores') {
       Icon = Coracao;
     }
-    return <Icon color={color} />;
+    return <Icon color={color} width={20} height={20} />;
   },
 });
 
